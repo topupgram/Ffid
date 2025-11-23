@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricelist Free Fire – Indonesia</title>
+  <style>
+    body {
+      font-family: Roboto, sans-serif;
+      background: #C9DBF000;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    .subtitle {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #555;
+      font-size: 12px;
+    }
+    .section-title {
+      font-size: 12px;
+      margin: 20px 0 10px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 6px;
+    }
+    ul.pricelist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.pricelist li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #fafafa;
+      margin-bottom: 6px;
+      border: 1px solid #eee;
+      font-size: 10px;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.05s;
+    }
+    ul.pricelist li:nth-child(odd) {
+      background: #fefefe;
+    }
+    ul.pricelist li:hover {
+      background: #e9f3ff;
+      transform: translateY(-1px);
+    }
+    .item-name {
+      font-weight: 500;
+    }
+    .item-code {
+      display: none;
+    }
+    .item-price {
+      font-weight: 600;
+      color: #007bff;
+      white-space: nowrap;
+    }
+
+    /* FORM ORDER */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    form label {
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    form input,
+    form select {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #dddddd;
+      font-size: 10px;
+    }
+    form button[type="submit"] {
+      margin-top: 10px;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #4E5E7D;
+      color: #ffffff;
+      font-size: 13px;
+    }
+
+    .qty-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid #cccccc;
+      background: #f5f5f5;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .qty-btn:active {
+      background: #e0e0e0;
+    }
+    #orderQty {
+      width: 48px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Free Fire – Indonesia</h1>
+    <div class="subtitle">Proses fast via UID</div>
+
+    <!-- Diamonds -->
+    <div class="section">
+      <div class="section-title">Diamonds</div>
+      <ul class="pricelist">
+        <li data-item="5 Diamonds" data-price="1588">
+          <span class="item-name">5 Diamonds<span class="item-code">FF_ID_5</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="10 Diamonds" data-price="2376">
+          <span class="item-name">10 Diamonds<span class="item-code">FF_ID_10</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="12 Diamonds" data-price="2518">
+          <span class="item-name">12 Diamonds<span class="item-code">FF_ID_12</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="15 Diamonds" data-price="3163">
+          <span class="item-name">15 Diamonds<span class="item-code">FF_ID_15</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="20 Diamonds" data-price="3951">
+          <span class="item-name">20 Diamonds<span class="item-code">FF_ID_20</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="25 Diamonds" data-price="5039">
+          <span class="item-name">25 Diamonds<span class="item-code">FF_ID_25</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="30 Diamonds" data-price="5826">
+          <span class="item-name">30 Diamonds<span class="item-code">FF_ID_30</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="50 Diamonds" data-price="7401">
+          <span class="item-name">50 Diamonds<span class="item-code">FF_ID_50</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="40 Diamonds" data-price="7402">
+          <span class="item-name">40 Diamonds<span class="item-code">FF_ID_40</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="55 Diamonds" data-price="8188">
+          <span class="item-name">55 Diamonds<span class="item-code">FF_ID_55</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="60 Diamonds" data-price="8976">
+          <span class="item-name">60 Diamonds<span class="item-code">FF_ID_60</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="70 Diamonds" data-price="9763">
+          <span class="item-name">70 Diamonds<span class="item-code">FF_ID_70</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="75 Diamonds" data-price="10559">
+          <span class="item-name">75 Diamonds<span class="item-code">FF_ID_75</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="80 Diamonds" data-price="11338">
+          <span class="item-name">80 Diamonds<span class="item-code">FF_ID_80</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="90 Diamonds" data-price="12913">
+          <span class="item-name">90 Diamonds<span class="item-code">FF_ID_90</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="95 Diamonds" data-price="13672">
+          <span class="item-name">95 Diamonds<span class="item-code">FF_ID_95</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="100 Diamonds" data-price="14526">
+          <span class="item-name">100 Diamonds<span class="item-code">FF_ID_100</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="120 Diamonds" data-price="16235">
+          <span class="item-name">120 Diamonds<span class="item-code">FF_ID_120</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="125 Diamonds" data-price="17333">
+          <span class="item-name">125 Diamonds<span class="item-code">FF_ID_125</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="130 Diamonds" data-price="17944">
+          <span class="item-name">130 Diamonds<span class="item-code">FF_ID_130</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="140 Diamonds" data-price="18797">
+          <span class="item-name">140 Diamonds<span class="item-code">FF_ID_140</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="145 Diamonds" data-price="19650">
+          <span class="item-name">145 Diamonds<span class="item-code">FF_ID_145</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="150 Diamonds" data-price="20505">
+          <span class="item-name">150 Diamonds<span class="item-code">FF_ID_150</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="160 Diamonds" data-price="22214">
+          <span class="item-name">160 Diamonds<span class="item-code">FF_ID_160</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="170 Diamonds" data-price="23813">
+          <span class="item-name">170 Diamonds<span class="item-code">FF_ID_170</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="180 Diamonds" data-price="25515">
+          <span class="item-name">180 Diamonds<span class="item-code">FF_ID_180</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="190 Diamonds" data-price="25515">
+          <span class="item-name">190 Diamonds<span class="item-code">FF_ID_190</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="200 Diamonds" data-price="26963">
+          <span class="item-name">200 Diamonds<span class="item-code">FF_ID_200</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="210 Diamonds" data-price="27805">
+          <span class="item-name">210 Diamonds<span class="item-code">FF_ID_210</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="230 Diamonds" data-price="31176">
+          <span class="item-name">230 Diamonds<span class="item-code">FF_ID_230</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="260 Diamonds" data-price="34546">
+          <span class="item-name">260 Diamonds<span class="item-code">FF_ID_260</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="250 Diamonds" data-price="34547">
+          <span class="item-name">250 Diamonds<span class="item-code">FF_ID_250</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="280 Diamonds" data-price="37072">
+          <span class="item-name">280 Diamonds<span class="item-code">FF_ID_280</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="300 Diamonds" data-price="40443">
+          <span class="item-name">300 Diamonds<span class="item-code">FF_ID_300</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="350 Diamonds" data-price="45908">
+          <span class="item-name">350 Diamonds<span class="item-code">FF_ID_350</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="355 Diamonds" data-price="45908">
+          <span class="item-name">355 Diamonds<span class="item-code">FF_ID_355</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="360 Diamonds" data-price="46742">
+          <span class="item-name">360 Diamonds<span class="item-code">FF_ID_360</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="375 Diamonds" data-price="49247">
+          <span class="item-name">375 Diamonds<span class="item-code">FF_ID_375</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="405 Diamonds" data-price="52586">
+          <span class="item-name">405 Diamonds<span class="item-code">FF_ID_405</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="400 Diamonds" data-price="53421">
+          <span class="item-name">400 Diamonds<span class="item-code">FF_ID_400</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="425 Diamonds" data-price="54570">
+          <span class="item-name">425 Diamonds<span class="item-code">FF_ID_425</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="420 Diamonds" data-price="54571">
+          <span class="item-name">420 Diamonds<span class="item-code">FF_ID_420</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="455 Diamonds" data-price="59531">
+          <span class="item-name">455 Diamonds<span class="item-code">FF_ID_455</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="475 Diamonds" data-price="61185">
+          <span class="item-name">475 Diamonds<span class="item-code">FF_ID_475</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="495 Diamonds" data-price="63664">
+          <span class="item-name">495 Diamonds<span class="item-code">FF_ID_495</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="500 Diamonds" data-price="64490">
+          <span class="item-name">500 Diamonds<span class="item-code">FF_ID_500</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="510 Diamonds" data-price="66144">
+          <span class="item-name">510 Diamonds<span class="item-code">FF_ID_510</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="512 Diamonds" data-price="66294">
+          <span class="item-name">512 Diamonds<span class="item-code">FF_ID_512</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="515 Diamonds" data-price="66971">
+          <span class="item-name">515 Diamonds<span class="item-code">FF_ID_515</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="520 Diamonds" data-price="67799">
+          <span class="item-name">520 Diamonds<span class="item-code">FF_ID_520</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="545 Diamonds" data-price="69609">
+          <span class="item-name">545 Diamonds<span class="item-code">FF_ID_545</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="565 Diamonds" data-price="72066">
+          <span class="item-name">565 Diamonds<span class="item-code">FF_ID_565</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="600 Diamonds" data-price="77799">
+          <span class="item-name">600 Diamonds<span class="item-code">FF_ID_600</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="635 Diamonds" data-price="81073">
+          <span class="item-name">635 Diamonds<span class="item-code">FF_ID_635</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="645 Diamonds" data-price="82711">
+          <span class="item-name">645 Diamonds<span class="item-code">FF_ID_645</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="655 Diamonds" data-price="84349">
+          <span class="item-name">655 Diamonds<span class="item-code">FF_ID_655</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="720 Diamonds" data-price="90081">
+          <span class="item-name">720 Diamonds<span class="item-code">FF_ID_720</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="710 Diamonds" data-price="90082">
+          <span class="item-name">710 Diamonds<span class="item-code">FF_ID_710</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="700 Diamonds" data-price="90083">
+          <span class="item-name">700 Diamonds<span class="item-code">FF_ID_700</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="725 Diamonds" data-price="90899">
+          <span class="item-name">725 Diamonds<span class="item-code">FF_ID_725</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="740 Diamonds" data-price="93357">
+          <span class="item-name">740 Diamonds<span class="item-code">FF_ID_740</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="770 Diamonds" data-price="96633">
+          <span class="item-name">770 Diamonds<span class="item-code">FF_ID_770</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="790 Diamonds" data-price="99089">
+          <span class="item-name">790 Diamonds<span class="item-code">FF_ID_790</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="800 Diamonds" data-price="100727">
+          <span class="item-name">800 Diamonds<span class="item-code">FF_ID_800</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="820 Diamonds" data-price="104003">
+          <span class="item-name">820 Diamonds<span class="item-code">FF_ID_820</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="840 Diamonds" data-price="105641">
+          <span class="item-name">840 Diamonds<span class="item-code">FF_ID_840</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="860 Diamonds" data-price="108097">
+          <span class="item-name">860 Diamonds<span class="item-code">FF_ID_860</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="910 Diamonds" data-price="114649">
+          <span class="item-name">910 Diamonds<span class="item-code">FF_ID_910</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="930 Diamonds" data-price="117105">
+          <span class="item-name">930 Diamonds<span class="item-code">FF_ID_930</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="925 Diamonds" data-price="115980">
+          <span class="item-name">925 Diamonds<span class="item-code">FF_ID_925</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1000 Diamonds" data-price="124900">
+          <span class="item-name">1000 Diamonds<span class="item-code">FF_ID_1000</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1050 Diamonds" data-price="131389">
+          <span class="item-name">1050 Diamonds<span class="item-code">FF_ID_1050</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1060 Diamonds" data-price="133011">
+          <span class="item-name">1060 Diamonds<span class="item-code">FF_ID_1060</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1075 Diamonds" data-price="133822">
+          <span class="item-name">1075 Diamonds<span class="item-code">FF_ID_1075</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1080 Diamonds" data-price="134632">
+          <span class="item-name">1080 Diamonds<span class="item-code">FF_ID_1080</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1125 Diamonds" data-price="140311">
+          <span class="item-name">1125 Diamonds<span class="item-code">FF_ID_1125</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1145 Diamonds" data-price="142744">
+          <span class="item-name">1145 Diamonds<span class="item-code">FF_ID_1145</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1200 Diamonds" data-price="150043">
+          <span class="item-name">1200 Diamonds<span class="item-code">FF_ID_1200</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1215 Diamonds" data-price="151664">
+          <span class="item-name">1215 Diamonds<span class="item-code">FF_ID_1215</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1300 Diamonds" data-price="163019">
+          <span class="item-name">1300 Diamonds<span class="item-code">FF_ID_1300</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1450 Diamonds" data-price="176865">
+          <span class="item-name">1450 Diamonds<span class="item-code">FF_ID_1450</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1440 Diamonds" data-price="178428">
+          <span class="item-name">1440 Diamonds<span class="item-code">FF_ID_1440</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1490 Diamonds" data-price="183355">
+          <span class="item-name">1490 Diamonds<span class="item-code">FF_ID_1490</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1510 Diamonds" data-price="184978">
+          <span class="item-name">1510 Diamonds<span class="item-code">FF_ID_1510</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1580 Diamonds" data-price="193900">
+          <span class="item-name">1580 Diamonds<span class="item-code">FF_ID_1580</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1795 Diamonds" data-price="221474">
+          <span class="item-name">1795 Diamonds<span class="item-code">FF_ID_1795</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1800 Diamonds" data-price="222285">
+          <span class="item-name">1800 Diamonds<span class="item-code">FF_ID_1800</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1875 Diamonds" data-price="230395">
+          <span class="item-name">1875 Diamonds<span class="item-code">FF_ID_1875</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="1975 Diamonds" data-price="244183">
+          <span class="item-name">1975 Diamonds<span class="item-code">FF_ID_1975</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="2000 Diamonds" data-price="246616">
+          <span class="item-name">2000 Diamonds<span class="item-code">FF_ID_2000</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="2005 Diamonds" data-price="247428">
+          <span class="item-name">2005 Diamonds<span class="item-code">FF_ID_2005</span></span>
+          <span class="item-price"></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Pass & Membership -->
+    <div class="section">
+      <div class="section-title">Pass &amp; Membership</div>
+      <ul class="pricelist">
+        <li data-item="Level Up Pass - Level 6" data-price="5825">
+          <span class="item-name">Level Up Pass - Level 6<span class="item-code">FF_ID_LUP6</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="Level Up Pass - Level 10" data-price="8975">
+          <span class="item-name">Level Up Pass - Level 10<span class="item-code">FF_ID_LUP10</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="Level Up Pass - Level 25" data-price="8975">
+          <span class="item-name">Level Up Pass - Level 25<span class="item-code">FF_ID_LUP25</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="Level Up Pass - Level 20" data-price="8975">
+          <span class="item-name">Level Up Pass - Level 20<span class="item-code">FF_ID_LUP20</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="Level Up Pass - Level 15" data-price="8975">
+          <span class="item-name">Level Up Pass - Level 15<span class="item-code">FF_ID_LUP15</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="Level Up Pass - Level 30" data-price="13738">
+          <span class="item-name">Level Up Pass - Level 30<span class="item-code">FF_ID_LUP30</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="Member Mingguan" data-price="28084">
+          <span class="item-name">Member Mingguan<span class="item-code">FF_ID_MM</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="BP Card" data-price="41733">
+          <span class="item-name">BP Card<span class="item-code">FF_ID_BPC</span></span>
+          <span class="item-price"></span>
+        </li>
+        <li data-item="Member Bulanan" data-price="81891">
+          <span class="item-name">Member Bulanan<span class="item-code">FF_ID_MB</span></span>
+          <span class="item-price"></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- FORM ORDER -->
+    <div class="section">
+      <div class="section-title">Form Order</div>
+
+      <form id="orderForm" onsubmit="sendToWhatsApp(event)">
+        <label for="userId">User ID:</label>
+        <input
+          type="text"
+          id="userId"
+          placeholder="contoh: 1234567890"
+          required
+        />
+
+        <label for="nickname">Nickname in game:</label>
+        <input
+          type="text"
+          id="nickname"
+          placeholder="nickname kamu"
+          required
+        />
+
+        <label for="orderSelect">Order:</label>
+        <select id="orderSelect" required>
+          <option value="" disabled selected>Pilih produk</option>
+
+          <!-- Diamonds (options sama dengan list di atas) -->
+          <option value="5 Diamonds" data-price="1588">5 Diamonds</option>
+          <option value="10 Diamonds" data-price="2376">10 Diamonds</option>
+          <option value="12 Diamonds" data-price="2518">12 Diamonds</option>
+          <option value="15 Diamonds" data-price="3163">15 Diamonds</option>
+          <option value="20 Diamonds" data-price="3951">20 Diamonds</option>
+          <option value="25 Diamonds" data-price="5039">25 Diamonds</option>
+          <option value="30 Diamonds" data-price="5826">30 Diamonds</option>
+          <option value="50 Diamonds" data-price="7401">50 Diamonds</option>
+          <option value="40 Diamonds" data-price="7402">40 Diamonds</option>
+          <option value="55 Diamonds" data-price="8188">55 Diamonds</option>
+          <option value="60 Diamonds" data-price="8976">60 Diamonds</option>
+          <option value="70 Diamonds" data-price="9763">70 Diamonds</option>
+          <option value="75 Diamonds" data-price="10559">75 Diamonds</option>
+          <option value="80 Diamonds" data-price="11338">80 Diamonds</option>
+          <option value="90 Diamonds" data-price="12913">90 Diamonds</option>
+          <option value="95 Diamonds" data-price="13672">95 Diamonds</option>
+          <option value="100 Diamonds" data-price="14526">100 Diamonds</option>
+          <option value="120 Diamonds" data-price="16235">120 Diamonds</option>
+          <option value="125 Diamonds" data-price="17333">125 Diamonds</option>
+          <option value="130 Diamonds" data-price="17944">130 Diamonds</option>
+          <option value="140 Diamonds" data-price="18797">140 Diamonds</option>
+          <option value="145 Diamonds" data-price="19650">145 Diamonds</option>
+          <option value="150 Diamonds" data-price="20505">150 Diamonds</option>
+          <option value="160 Diamonds" data-price="22214">160 Diamonds</option>
+          <option value="170 Diamonds" data-price="23813">170 Diamonds</option>
+          <option value="180 Diamonds" data-price="25515">180 Diamonds</option>
+          <option value="190 Diamonds" data-price="25515">190 Diamonds</option>
+          <option value="200 Diamonds" data-price="26963">200 Diamonds</option>
+          <option value="210 Diamonds" data-price="27805">210 Diamonds</option>
+          <option value="230 Diamonds" data-price="31176">230 Diamonds</option>
+          <option value="260 Diamonds" data-price="34546">260 Diamonds</option>
+          <option value="250 Diamonds" data-price="34547">250 Diamonds</option>
+          <option value="280 Diamonds" data-price="37072">280 Diamonds</option>
+          <option value="300 Diamonds" data-price="40443">300 Diamonds</option>
+          <option value="350 Diamonds" data-price="45908">350 Diamonds</option>
+          <option value="355 Diamonds" data-price="45908">355 Diamonds</option>
+          <option value="360 Diamonds" data-price="46742">360 Diamonds</option>
+          <option value="375 Diamonds" data-price="49247">375 Diamonds</option>
+          <option value="405 Diamonds" data-price="52586">405 Diamonds</option>
+          <option value="400 Diamonds" data-price="53421">400 Diamonds</option>
+          <option value="425 Diamonds" data-price="54570">425 Diamonds</option>
+          <option value="420 Diamonds" data-price="54571">420 Diamonds</option>
+          <option value="455 Diamonds" data-price="59531">455 Diamonds</option>
+          <option value="475 Diamonds" data-price="61185">475 Diamonds</option>
+          <option value="495 Diamonds" data-price="63664">495 Diamonds</option>
+          <option value="500 Diamonds" data-price="64490">500 Diamonds</option>
+          <option value="510 Diamonds" data-price="66144">510 Diamonds</option>
+          <option value="512 Diamonds" data-price="66294">512 Diamonds</option>
+          <option value="515 Diamonds" data-price="66971">515 Diamonds</option>
+          <option value="520 Diamonds" data-price="67799">520 Diamonds</option>
+          <option value="545 Diamonds" data-price="69609">545 Diamonds</option>
+          <option value="565 Diamonds" data-price="72066">565 Diamonds</option>
+          <option value="600 Diamonds" data-price="77799">600 Diamonds</option>
+          <option value="635 Diamonds" data-price="81073">635 Diamonds</option>
+          <option value="645 Diamonds" data-price="82711">645 Diamonds</option>
+          <option value="655 Diamonds" data-price="84349">655 Diamonds</option>
+          <option value="720 Diamonds" data-price="90081">720 Diamonds</option>
+          <option value="710 Diamonds" data-price="90082">710 Diamonds</option>
+          <option value="700 Diamonds" data-price="90083">700 Diamonds</option>
+          <option value="725 Diamonds" data-price="90899">725 Diamonds</option>
+          <option value="740 Diamonds" data-price="93357">740 Diamonds</option>
+          <option value="770 Diamonds" data-price="96633">770 Diamonds</option>
+          <option value="790 Diamonds" data-price="99089">790 Diamonds</option>
+          <option value="800 Diamonds" data-price="100727">800 Diamonds</option>
+          <option value="820 Diamonds" data-price="104003">820 Diamonds</option>
+          <option value="840 Diamonds" data-price="105641">840 Diamonds</option>
+          <option value="860 Diamonds" data-price="108097">860 Diamonds</option>
+          <option value="910 Diamonds" data-price="114649">910 Diamonds</option>
+          <option value="930 Diamonds" data-price="117105">930 Diamonds</option>
+          <option value="925 Diamonds" data-price="115980">925 Diamonds</option>
+          <option value="1000 Diamonds" data-price="124900">1000 Diamonds</option>
+          <option value="1050 Diamonds" data-price="131389">1050 Diamonds</option>
+          <option value="1060 Diamonds" data-price="133011">1060 Diamonds</option>
+          <option value="1075 Diamonds" data-price="133822">1075 Diamonds</option>
+          <option value="1080 Diamonds" data-price="134632">1080 Diamonds</option>
+          <option value="1125 Diamonds" data-price="140311">1125 Diamonds</option>
+          <option value="1145 Diamonds" data-price="142744">1145 Diamonds</option>
+          <option value="1200 Diamonds" data-price="150043">1200 Diamonds</option>
+          <option value="1215 Diamonds" data-price="151664">1215 Diamonds</option>
+          <option value="1300 Diamonds" data-price="163019">1300 Diamonds</option>
+          <option value="1450 Diamonds" data-price="176865">1450 Diamonds</option>
+          <option value="1440 Diamonds" data-price="178428">1440 Diamonds</option>
+          <option value="1490 Diamonds" data-price="183355">1490 Diamonds</option>
+          <option value="1510 Diamonds" data-price="184978">1510 Diamonds</option>
+          <option value="1580 Diamonds" data-price="193900">1580 Diamonds</option>
+          <option value="1795 Diamonds" data-price="221474">1795 Diamonds</option>
+          <option value="1800 Diamonds" data-price="222285">1800 Diamonds</option>
+          <option value="1875 Diamonds" data-price="230395">1875 Diamonds</option>
+          <option value="1975 Diamonds" data-price="244183">1975 Diamonds</option>
+          <option value="2000 Diamonds" data-price="246616">2000 Diamonds</option>
+          <option value="2005 Diamonds" data-price="247428">2005 Diamonds</option>
+
+          <!-- Pass & Membership -->
+          <option value="Level Up Pass - Level 6" data-price="5825">Level Up Pass - Level 6</option>
+          <option value="Level Up Pass - Level 10" data-price="8975">Level Up Pass - Level 10</option>
+          <option value="Level Up Pass - Level 25" data-price="8975">Level Up Pass - Level 25</option>
+          <option value="Level Up Pass - Level 20" data-price="8975">Level Up Pass - Level 20</option>
+          <option value="Level Up Pass - Level 15" data-price="8975">Level Up Pass - Level 15</option>
+          <option value="Level Up Pass - Level 30" data-price="13738">Level Up Pass - Level 30</option>
+          <option value="Member Mingguan" data-price="28084">Member Mingguan</option>
+          <option value="BP Card" data-price="41733">BP Card</option>
+          <option value="Member Bulanan" data-price="81891">Member Bulanan</option>
+        </select>
+
+        <label>Jumlah order:</label>
+        <div class="qty-wrapper">
+          <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
+          <input type="number" id="orderQty" value="1" min="1" readonly />
+          <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+
+        <label for="orderPrice">Total Harga:</label>
+        <input
+          type="text"
+          id="orderPrice"
+          placeholder="Rp 0"
+          readonly
+        />
+
+        <button type="submit">Kirim ke WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Format Rp pakai titik
+    function formatRupiah(value) {
+      var numberString = String(value).replace(/[^0-9]/g, '');
+      if (!numberString) return '';
+      return 'Rp ' + numberString.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+
+    function updateTotal() {
+      var select = document.getElementById('orderSelect');
+      var qtyInput = document.getElementById('orderQty');
+      var priceInput = document.getElementById('orderPrice');
+      if (!select || !qtyInput || !priceInput) return;
+
+      var option = select.options[select.selectedIndex];
+      if (!option) {
+        priceInput.value = '';
+        return;
+      }
+      var basePrice = option.getAttribute('data-price');
+      var qty = parseInt(qtyInput.value, 10) || 1;
+
+      if (!basePrice) {
+        priceInput.value = '';
+        return;
+      }
+      var total = parseInt(basePrice, 10) * qty;
+      priceInput.value = formatRupiah(total);
+    }
+
+    function changeQty(delta) {
+      var qtyInput = document.getElementById('orderQty');
+      if (!qtyInput) return;
+      var current = parseInt(qtyInput.value, 10) || 1;
+      current += delta;
+      if (current < 1) current = 1;
+      qtyInput.value = current;
+      updateTotal();
+    }
+
+    // Klik pricebox → auto pilih di dropdown + qty = 1
+    function selectProduct(item) {
+      var select = document.getElementById('orderSelect');
+      var qtyInput = document.getElementById('orderQty');
+      if (select) {
+        for (var i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === item) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      if (qtyInput) qtyInput.value = 1;
+      updateTotal();
+    }
+
+    // Kirim form ke WhatsApp
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      var userId = document.getElementById('userId').value.trim();
+      var nickname = document.getElementById('nickname').value.trim();
+      var select = document.getElementById('orderSelect');
+      var qty = document.getElementById('orderQty').value.trim();
+      var price = document.getElementById('orderPrice').value.trim();
+
+      var orderText = '';
+      if (select && select.value) {
+        orderText = select.value;
+      }
+
+      var message =
+        '**Order Diamond Free Fire Indonesia**\n' +
+        'User ID: ' + userId + '\n' +
+        'Nickname in game: ' + nickname + '\n' +
+        'Order: ' + orderText + '\n' +
+        'Jumlah: x' + qty + '\n' +
+        'Total Harga: ' + price;
+
+      var phone = '6283197962700';
+      var url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+      window.open(url, '_blank');
+    }
+
+    // Inisialisasi: isi harga di list + klik pricebox
+    document.addEventListener('DOMContentLoaded', function () {
+      var items = document.querySelectorAll('.pricelist li');
+      for (var i = 0; i < items.length; i++) {
+        (function (li) {
+          var item = li.getAttribute('data-item');
+          var price = li.getAttribute('data-price');
+          var priceSpan = li.querySelector('.item-price');
+
+          if (priceSpan && price) {
+            priceSpan.textContent = formatRupiah(price);
+          }
+
+          li.addEventListener('click', function () {
+            selectProduct(item);
+            var form = document.getElementById('orderForm');
+            if (form) {
+              form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        })(items[i]);
+      }
+
+      var select = document.getElementById('orderSelect');
+      if (select) {
+        select.addEventListener('change', updateTotal);
+      }
+    });
+  </script>
+</body>
+</html>

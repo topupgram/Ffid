@@ -70,7 +70,6 @@
       white-space: nowrap;
     }
 
-    /* FORM ORDER */
     form {
       display: flex;
       flex-direction: column;
@@ -129,8 +128,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>Free Fire</h1>
-    <div class="subtitle">Klik produk untuk auto pilih di form</div>
+    <h1>Free Fire - Indonesia</h1>
+    <div class="subtitle">Proses fast via UID</div>
 
     <div class="section">
       <div class="section-title">Diamonds</div>
@@ -184,9 +183,9 @@
       return 'Rp ' + numberString.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     }
 
-    // RULES MARKUP (SAMA PERSIS)
+    // RULES MARKUP (UPDATED: basePrice > 0)
     function calcMarkup(basePrice) {
-      if (basePrice >= 1000 && basePrice < 16000) return 800;
+      if (basePrice > 0 && basePrice < 16000) return 800;
 
       if (basePrice >= 16000 && basePrice <= 50000) {
         var m2 = Math.round(basePrice * 0.05);
@@ -227,7 +226,7 @@
       return basePrice + calcMarkup(basePrice);
     }
 
-    // BASE PRICELIST (KAMU)
+    // BASE PRICELIST (KAMU - UPDATED LIST)
     var PRODUCTS = [
       { item: "5 Diamonds", price: 919 },
       { item: "12 Diamonds", price: 1820 },
@@ -328,7 +327,58 @@
       { item: "1875 Diamonds", price: 237007 },
       { item: "1975 Diamonds", price: 251697 },
       { item: "2000 Diamonds", price: 254448 },
-      { item: "2005 Diamonds", price: 255366 }
+      { item: "2005 Diamonds", price: 255366 },
+      { item: "2020 Diamonds", price: 258122 },
+      { item: "2100 Diamonds", price: 267299 },
+      { item: "2140 Diamonds", price: 272805 },
+      { item: "2180 Diamonds", price: 273133 },
+      { item: "2160 Diamonds", price: 273722 },
+      { item: "2190 Diamonds", price: 274970 },
+      { item: "2200 Diamonds", price: 276807 },
+      { item: "2210 Diamonds", price: 278644 },
+      { item: "2225 Diamonds", price: 281400 },
+      { item: "2280 Diamonds", price: 287823 },
+      { item: "2350 Diamonds", price: 297002 },
+      { item: "2355 Diamonds", price: 297920 },
+      { item: "2400 Diamonds", price: 302506 },
+      { item: "2575 Diamonds", price: 326375 },
+      { item: "2720 Diamonds", price: 345651 },
+      { item: "2750 Diamonds", price: 347481 },
+      { item: "3000 Diamonds", price: 379608 },
+      { item: "3310 Diamonds", price: 419074 },
+      { item: "3640 Diamonds", price: 456294 },
+      { item: "3620 Diamonds", price: 456704 },
+      { item: "3675 Diamonds", price: 462724 },
+      { item: "3800 Diamonds", price: 478325 },
+      { item: "4000 Diamonds", price: 503106 },
+      { item: "4050 Diamonds", price: 510449 },
+      { item: "4340 Diamonds", price: 549001 },
+      { item: "4450 Diamonds", price: 560932 },
+      { item: "4720 Diamonds", price: 594891 },
+      { item: "4800 Diamonds", price: 607746 },
+      { item: "4850 Diamonds", price: 615089 },
+      { item: "5500 Diamonds", price: 692384 },
+      { item: "5600 Diamonds", price: 705235 },
+      { item: "6000 Diamonds", price: 755715 },
+      { item: "6480 Diamonds", price: 816627 },
+      { item: "6550 Diamonds", price: 823049 },
+      { item: "6900 Diamonds", price: 868023 },
+      { item: "7290 Diamonds", price: 899275 },
+      { item: "7295 Diamonds", price: 900383 },
+      { item: "7310 Diamonds", price: 903138 },
+      { item: "7340 Diamonds", price: 906808 },
+      { item: "7360 Diamonds", price: 908643 },
+      { item: "7430 Diamonds", price: 917821 },
+      { item: "7645 Diamonds", price: 945357 },
+      { item: "7650 Diamonds", price: 946276 },
+      { item: "8010 Diamonds", price: 991249 },
+      { item: "8730 Diamonds", price: 1083035 },
+      { item: "9290 Diamonds", price: 1157385 },
+      { item: "9800 Diamonds", price: 1216655 },
+      { item: "14580 Diamonds", price: 1798928 },
+      { item: "36500 Diamonds", price: 4496369 },
+      { item: "37050 Diamonds", price: 4569786 },
+      { item: "73100 Diamonds", price: 8992738 }
     ];
 
     function isDiamond(name) {
